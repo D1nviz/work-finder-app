@@ -7,8 +7,8 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useAppDispatch } from "@/hooks/useRedux";
 import { logout } from "@/store/features/userSlice";
-import { LogOut, User } from "lucide-react";
-
+import { LogOut } from "lucide-react";
+import User from "@/assets/user.png";
 export default function UserMenu() {
   const { toast } = useToast();
   const dispatch = useAppDispatch();
@@ -22,9 +22,7 @@ export default function UserMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="bg-gray-100 p-2 rounded-full cursor-pointer">
-          <User className="h-6 w-6 " />
-        </div>
+        <img src={User} className="w-8 h-8 cursor-pointer" alt="user" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem className="cursor-pointer " onSelect={handleSignOut}>

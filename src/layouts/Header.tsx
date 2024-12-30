@@ -16,7 +16,7 @@ export default function Header() {
     <header className="bg-white shadow-md py-3 ">
       <MaxWidthWrapper className="flex justify-between items-center">
         <Link to="/">
-          <img className="w-11 h-11" src={Logo} alt="logo" />
+          <img className="w-[70%]" src={Logo} alt="logo" />
         </Link>
 
         <SearchDialog />

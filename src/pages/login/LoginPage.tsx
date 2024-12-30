@@ -8,7 +8,7 @@ import {
 import { useIsAuthenticated } from "@/store/features/userSlice";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import AuthBanner from "@/assets/auth_banner.png";
 
 const LoginPage = () => {
@@ -59,6 +59,13 @@ const LoginPage = () => {
             Увійти
           </Button>
         </form>
+
+        <p className="text-center">
+          Ще не маєте акаунту?{" "}
+          <Link to="/register" className="text-primary">
+            Зареєструватись
+          </Link>
+        </p>
       </div>
     </div>
   );

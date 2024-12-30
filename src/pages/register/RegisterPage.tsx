@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import AuthBanner from "@/assets/auth_banner.png";
 import { useIsAuthenticated } from "@/store/features/userSlice";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const [handleSignUp, { isLoading }] = useSignUp();
@@ -73,6 +73,12 @@ const RegisterPage = () => {
             Зареєструватись
           </Button>
         </form>
+        <p className="text-center">
+          Вже маєте аккаунт?{" "}
+          <Link to="/login" className="text-primary">
+            Увійти
+          </Link>
+        </p>
       </div>
     </div>
   );
